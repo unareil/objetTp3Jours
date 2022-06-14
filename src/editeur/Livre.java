@@ -13,14 +13,12 @@ public class Livre {
     }
 
     public Livre(String titreLivre, String auteur, Double prix, int nbPages, String isbn, int annee) {
+        super();
         this.setTitreLivre(titreLivre);
-        this.setAuteur(auteur);
-        this.setPrix(prix);
         this.setNbPages(nbPages);
         this.setIsbn(isbn);
-        this.setAnnee(annee);
     }
-
+    
     public String getTitreLivre() {
         return titreLivre;
     }
@@ -71,13 +69,14 @@ public class Livre {
 
     @Override
     public String toString() {
-        return "Livre{" +
-                "titreLivre='" + titreLivre + '\'' +
-                ", auteur='" + auteur + '\'' +
-                ", prix=" + prix +
-                ", nbPages=" + nbPages +
-                ", isbn='" + isbn + '\'' +
-                ", annee='" + annee + '\'' +
-                '}';
+        final StringBuffer sb = new StringBuffer("Livre{");
+        sb.append("titreLivre='").append(titreLivre).append('\'');
+        sb.append(", auteur='").append(auteur).append('\'');
+        sb.append(", prix=").append(prix);
+        sb.append(", nbPages=").append(nbPages);
+        sb.append(", isbn='").append(isbn).append('\'');
+        sb.append(", annee=").append(annee);
+        sb.append('}');
+        return sb.toString();
     }
 }
