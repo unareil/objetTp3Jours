@@ -18,7 +18,7 @@ public class Livre {
         this.setNbPages(nbPages);
         this.setIsbn(isbn);
     }
-    
+
     public String getTitreLivre() {
         return titreLivre;
     }
