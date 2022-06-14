@@ -1,20 +1,24 @@
 package editeur;
 
 public class Livre {
-    String titreLivre;
-    String auteur;
-    Double prix;
-    int nbPages;
-    String isbn;
-    String annee;
+   private String titreLivre;
+   private String auteur;
+   private Double prix;
+   private int nbPages;
+   private String isbn;
+   private int annee;
 
-    public Livre(String titreLivre, String auteur, Double prix, int nbPages, String isbn, String annee) {
-        this.titreLivre = titreLivre;
-        this.auteur = auteur;
-        this.prix = prix;
-        this.nbPages = nbPages;
-        this.isbn = isbn;
-        this.annee = annee;
+    public Livre() {
+        super();
+    }
+
+    public Livre(String titreLivre, String auteur, Double prix, int nbPages, String isbn, int annee) {
+        this.setTitreLivre(titreLivre);
+        this.setAuteur(auteur);
+        this.setPrix(prix);
+        this.setNbPages(nbPages);
+        this.setIsbn(isbn);
+        this.setAnnee(annee);
     }
 
     public String getTitreLivre() {
@@ -57,11 +61,11 @@ public class Livre {
         this.isbn = isbn;
     }
 
-    public String getAnnee() {
+    public int getAnnee() {
         return annee;
     }
 
-    public void setAnnee(String annee) {
+    public void setAnnee(int annee) {
         this.annee = annee;
     }
 
