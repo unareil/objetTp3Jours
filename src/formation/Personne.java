@@ -1,15 +1,15 @@
 package formation;
 
-public class Formation {
+public class Personne {
 private String nom;
 private String prenom;
 private String telephone;
 
-    public Formation() {
+    public Personne() {
         super();
     }
 
-    public Formation(String nom, String prenom, String telephone) {
+    public Personne(String nom, String prenom, String telephone) {
         super();
         this.setNom(nom);
         this.setPrenom(prenom);

@@ -2,7 +2,7 @@ package formation;
 
 import java.util.Date;
 
-public class Stagiaire extends Formation{
+public class Stagiaire extends Personne{
     private Date dateNaissance;
     private String adresse;
     private String ville;
@@ -54,5 +54,16 @@ public class Stagiaire extends Formation{
 
     public void setCodePostal(String codePostal) {
         this.codePostal = codePostal;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Stagiaire{");
+        sb.append("dateNaissance=").append(dateNaissance);
+        sb.append(", adresse='").append(adresse).append('\'');
+        sb.append(", ville='").append(ville).append('\'');
+        sb.append(", codePostal='").append(codePostal).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

@@ -1,0 +1,24 @@
+@startuml
+
+class Personne {
+    *nom;
+    *prenom
+    *telephone
+}
+
+class Stagiaire extends Personne{
+    *dateNaissance
+    *codePostal
+    *ville
+    *adresse
+    toString();
+}
+
+class Formateur extends Personne {
+    *numeroIntervenant
+    *dateDeCreation
+    *nombreIntervenant
+    toString();
+}
+
+@enduml
