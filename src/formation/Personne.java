@@ -6,11 +6,9 @@ private String prenom;
 private String telephone;
 
     public Personne() {
-        super();
     }
 
     public Personne(String nom, String prenom, String telephone) {
-        super();
         this.setNom(nom);
         this.setPrenom(prenom);
         this.setTelephone(telephone);
@@ -38,5 +36,15 @@ private String telephone;
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Personne{");
+        sb.append("nom='").append(nom).append('\'');
+        sb.append(", prenom='").append(prenom).append('\'');
+        sb.append(", telephone='").append(telephone).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

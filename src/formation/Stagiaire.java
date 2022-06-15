@@ -12,8 +12,8 @@ public class Stagiaire extends Personne{
         super();
     }
 
-    public Stagiaire(Date dateNaissance, String adresse, String ville, String codePostal) {
-        super();
+    public Stagiaire(String nom, String prenom, String telephone, Date dateNaissance, String adresse, String ville, String codePostal) {
+        super(nom, prenom, telephone);
         this.setDateNaissance(dateNaissance);
         this.setAdresse(adresse);
         this.setVille(ville);
@@ -59,6 +59,7 @@ public class Stagiaire extends Personne{
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Stagiaire{");
+        sb.append(super.toString());
         sb.append("dateNaissance=").append(dateNaissance);
         sb.append(", adresse='").append(adresse).append('\'');
         sb.append(", ville='").append(ville).append('\'');

@@ -11,8 +11,8 @@ public class Formateur extends Personne{
         super();
     }
 
-    public Formateur(int numeroIntervenant, Date dateDeCreation, int nombreIntervenant) {
-        super();
+    public Formateur(String nom, String prenom, String telephone, int numeroIntervenant, Date dateDeCreation, int nombreIntervenant) {
+        super(nom, prenom, telephone);
         this.setNumeroIntervenant(numeroIntervenant);
         this.setDateDeCreation(dateDeCreation);
         this.setNombreIntervenant(nombreIntervenant);
@@ -49,6 +49,7 @@ public class Formateur extends Personne{
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Formateur{");
+        sb.append(super.toString());
         sb.append("numeroIntervenant=").append(numeroIntervenant);
         sb.append(", dateDeCreation=").append(dateDeCreation);
         sb.append(", nombreIntervenant=").append(nombreIntervenant);
