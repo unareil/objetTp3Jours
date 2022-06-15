@@ -1,0 +1,3 @@
+Exercice 2 d'après le schéma uml les attributs nom et prénom devraient être protected
+Exercice 3 public class Personne  devrait être abstract et vous n'avez pas encorre pushé mes remarques
+Exercice 4 attention au toString le StringBuilder plutôt
