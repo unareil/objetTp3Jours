@@ -10,10 +10,14 @@ public class TestPersonne {
         tintin.setNom("toto");
         System.out.println(tintin);
 
-        Formateur mrHadock = new Formateur("Hadock", "Hadock", "0499485871", 4170, new Date(), 1);
-
-        mrHadock.setNombreIntervenant(2);
+        Formateur mrHadock = new Formateur("Hadock", "Hadock", "0499485871", new Date());
         System.out.println(mrHadock);
+
+        Formateur mrHadock2 = new Formateur("Hadocké", "Hadocké", "006857847", new Date());
+        System.out.println(mrHadock2);
+
+        Formateur mrHadock3 = new Formateur("Hadock3", "Hadock3", "0721884542", new Date());
+        System.out.println(mrHadock3);
 
     }
 }

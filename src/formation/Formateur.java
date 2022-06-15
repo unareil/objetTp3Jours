@@ -3,19 +3,19 @@ package formation;
 import java.util.Date;
 
 public class Formateur extends Personne{
-    private int numeroIntervenant;
+    private int numeroIntervenant = 1;
     private Date dateDeCreation;
-    private int nombreIntervenant;
+    private static int nombreIntervenant;
 
     public Formateur() {
         super();
     }
 
-    public Formateur(String nom, String prenom, String telephone, int numeroIntervenant, Date dateDeCreation, int nombreIntervenant) {
+    public Formateur(String nom, String prenom, String telephone, Date dateDeCreation) {
         super(nom, prenom, telephone);
-        this.setNumeroIntervenant(numeroIntervenant);
+        this.setNombreIntervenant();
+        this.setNumeroIntervenant();
         this.setDateDeCreation(dateDeCreation);
-        this.setNombreIntervenant(nombreIntervenant);
     }
 
     public Formateur(String nom, String prenom, String telephone) {
@@ -26,8 +26,8 @@ public class Formateur extends Personne{
         return numeroIntervenant;
     }
 
-    public void setNumeroIntervenant(int numeroIntervenant) {
-        this.numeroIntervenant = numeroIntervenant;
+    public void setNumeroIntervenant() {
+        this.numeroIntervenant = nombreIntervenant;
     }
 
     public Date getDateDeCreation() {
@@ -42,8 +42,8 @@ public class Formateur extends Personne{
         return nombreIntervenant;
     }
 
-    public void setNombreIntervenant(int nombreIntervenant) {
-        this.nombreIntervenant = nombreIntervenant;
+    public void setNombreIntervenant() {
+        this.nombreIntervenant++;
     }
 
     @Override
